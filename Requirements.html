@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>OOP | Lab 5</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1344.72">
+  <style type="text/css">
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p3 {margin: 0.0px 0.0px 6.0px 0.0px; font: 16.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+    span.s2 {font-kerning: none; color: #000000}
+  </style>
+</head>
+<body>
+<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; text-align: center; font: 24.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Car Pooling<br>
+</b></span></h1>
+<p class="p2"><span class="s1">Develop a Java application, which allows company to organize Car pooling system.
+  There are drivers inside of company which helps employees to reach destination. Car pooling is a system which allows to organize this process and book driver beforehand.
+  All the classes must be in the </span><span class="s2">package </span><span class="s1">"uz.muu".</span></p>
+<p class="p3"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>R1 - Drivers Definition</b></span></h2>
+<p class="p2"><span class="s1">The system works through the facade class <b>CarPooling</b>.<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">The method <b>createDriver() </b>accepts the driver name and creates a <b>Driver </b>object. The class <b>Driver </b>provides the method <b>getName()</b>, which returns the Driver’s name.</span></p>
+<p class="p2"><span class="s1">The method <b>getDrivers()</b> returns a Collections of Drivers. The method <b>getDriver()</b> receives the drivers name as an input and returns the corresponding Driver object</span>. In case if driver with corresponding name does not exist, exception <b>NoSuchDriver</b> is thrown.</p>
+<p class="p2"><span class="s1">For simplicity we assume that all drivers work from 9:00 till 18:00.</span></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 23.0px"><span class="s1"><b></b></span><br></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>R2 - Employee</b></span></h2>
+<p class="p2"><span class="s1">Employees of an organization are added by administrator. The method <b>addEmployee()</b> is used </span><span class="s2">to add employee by means of ID, full name and position. In case if employee with corresponding ID exist, exception <b>EmployeeAlreadyExist</b> is thrown.</span><span class="s1"> The class Employee offers the method <b>getName()</b>, which returns the Employees full name.</span></p>
+<p class="p2"><span class="s1">To obtain a specific Employee it is possible to use the method </span><span class="s2"><b>getEmployee()</b></span><span class="s1">, which receives the ID of the Employee as a parameter. In case if employee with corresponding ID does not exist, exception <b>NoSuchEmployee</b> is thrown.</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p6"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>R3 - Driver booking</b></span></h2>
+<p class="p2"><span class="s1">The drivers could be booked by means of employee ID, driving starting time(e.g. 14:00) and total duration (1hr or 2hr). This operation could be done through the method <b>bookDriver()</b>. Method returns driver which is available at that time and makes driver unavailable for that time. In case if there is no driver in that timing slot, exception <b>NoDriverAvailableForBooking</b> is thrown.</span></p>
+<p class="p2"><span class="s1">The method <b>availableDriver()</b> which takes as an input: driving starting time(e.g. 14:00) and total duration (1hr or 2hr) and returns an object of type Driver, which is available at that time.  In case if there is no driver in that timing slot, exception <b>NoDriverAvailableForBooking</b> is thrown.</span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p6"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>R4  - Statistics</b></span></h2>
+<p class="p2"><span class="s1">Given a Drivers name it is possible to get the drivers availability for all day by using the method <b>getDriverTimetable()</b>, which gets the corresponding driver name as an input.<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1">Given an employee ID it is possible to know how many times he/she booked drivers by using the method <b>getNumberOfBookingsByEmployee()</b>.</span></p>
+<p class="p2"><span class="s1">The method <b>printAllBookings()</b> prints Collection of number of bookings by all employees and number of bookings sorted in descending way.</span></p>
+</body>
+</html>
