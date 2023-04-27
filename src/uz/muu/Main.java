@@ -39,7 +39,10 @@ public class Main {
         }
 
         try {
-            Driver availableDriver = cp.bookDriver(123, "14:00", 1);
+            Driver availableDriver = cp.bookDriver(123, "14:00", 2);
+            Driver availableDriver2 = cp.bookDriver(234, "14:30", 1);
+            Driver availableDriver3 = cp.bookDriver(123, "15:00", 1);
+            System.out.println("For checking");
         } catch (NoDriverAvailableForBooking e){
             System.err.println("No driver available for booking");
         }
